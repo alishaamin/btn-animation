@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button Hover Effect2</title>
+    <link rel="icon" href="/logo.png">
+  </head>
+  <body>
+    <div>
+      <div class="button-box">
+          <a class="btn">Move</a>
+      </div>
+    </div>
+    
+    <style>
+      body
+      {
+        background: #402399;
+        padding: 200px;
+      }
+
+      .button-box
+      {
+        background: #0171FF;
+        position: relative;
+        display: flex;
+        width:120px;
+        border-radius: 10px;
+        align-items: center;
+        padding: 10px 15px;
+      }
+
+      .btn
+      {
+        font-size: 30px;
+        color: #fff;
+        position: relative;
+        padding-left: 20px;
+        transition: all 0.4s ease-in-out;
+        cursor:pointer;
+        overflow:hidden;
+      }
+
+      /* css for line */
+      .btn::before
+      {
+        content:"";
+        width: 3px;
+        height: 100%;
+        border-radius: 2px;
+        position: absolute;
+        left:0;
+        background-color: #fff;
+        transition: all 0.4s ease-in-out;
+      }
+
+      /* css for arrow */
+      .btn::after
+      {
+        content:"";
+        position: absolute;
+        width:16px;
+        height:16px;
+        top: calc(50% - 10px);
+        display:flex;
+        align-items: center;
+        border: solid 3px #fff;
+        border-left:0;
+        border-bottom:0;
+        transform: translateX(-55px) rotate(45deg);
+        transition: all 0.4s ease-in-out;
+      }
+
+      .btn:hover::before
+      {
+        left: 16px;
+        transform: rotate(90deg);
+      }
+
+      .btn:hover::after
+      {
+        transform: translate(-35px) rotate(45deg);
+      }
+
+      .btn:hover
+      {
+        padding-left:47px;
+      }
+    </style>
+  </body>
+</html>

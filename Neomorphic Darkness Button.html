@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Neomorphic-darkness</title>
+      <link rel="icon" href="/logo.png">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="container">
+        <span><i class="fa fa-search" aria-hidden="true"></i></span>
+        <span><i class="fa fa-times" aria-hidden="true"></i></span>
+        <span><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+        <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+      <!--   <button>Submit</button> -->
+    </div>
+
+    <style>
+      body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:#253441;
+      }
+      i{
+        transform:scale(1.8);
+      }
+      .container {
+        height:100px;
+        width:auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .container > button{
+        height:45px;
+        width:200px;
+        border-radius: 45px;
+        border:none;
+        transition: all 0.5s ease;
+        color:#0EFFEE;
+        background: linear-gradient(145deg, #283846, #212f3b);
+      box-shadow:  5px 5px 17px #18212a, -5px -5px 17px #324758;
+      }
+
+      .container > span{
+        width: 50px;
+        transition: all 1.5s ease;
+        height:50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:20px;
+        padding:10px;
+        border-radius:5px;
+        color:#0EFFEE;
+        background: linear-gradient(145deg, #283846, #212f3b);
+        box-shadow:  5px 5px 17px #18212a, -5px -5px 17px #324758;
+      }
+      .container >span:nth-child(2){
+        color:red;
+      }
+      .container > span:hover{
+        cursor:pointer;
+        transition: all 0.4s;
+      background: #253441;
+      box-shadow: inset 5px 5px 10px #18212a, inset -5px -5px 10px #324758;
+      }
+    </style>
+  </body>
+</html>

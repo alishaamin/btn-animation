@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom radio button animation</title>
+    <!-- Remix icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Link to your stylesheet -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #343440;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* ======================== */
+        input {
+            display: none;
+        }
+
+        label {
+            position: relative;
+            color: #fff;
+            cursor: pointer;
+            padding-left: 25px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        label::before,
+        label::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+        }
+
+        label::before {
+            left: 0;
+            width: 10px;
+            height: 10px;
+            background-color: #7efefd;
+        }
+
+        label::after {
+            opacity: 0;
+            left: -7px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #7efefd;
+        }
+
+        input:checked~label::after {
+            opacity: 1;
+            animation: scaleInOut .25s;
+        }
+
+        @keyframes scaleInOut {
+            0% {
+                transform: translateY(-50%) scale(1.5);
+            }
+
+            50% {
+                transform: translateY(-50%) scale(0.5);
+            }
+
+            100% {
+                transform: translateY(-50%) scale(1);
+            }
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="options">
+      <div class="input">
+        <input type="radio" id="banana" name="fruits" value="banana" />
+        <label for="banana">Banana</label>
+      </div>
+      <div class="input">
+        <input type="radio" id="mango" name="fruits" value="mango" />
+        <label for="mango">Mango</label>
+      </div>
+      <div class="input">
+        <input type="radio" id="strawberry" name="fruits" value="strawberry" />
+        <label for="strawberry">Strawberry</label>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Toogle Switch</title>
+    <link rel="icon" href="/logo.png">
+  </head>
+
+  <body>
+    <input type="checkbox" />
+        <style>
+          body{
+            display: flex;
+            justify-content: center;
+            min-height:100vh;
+            align-items:center;
+            background:#000;
+          }
+
+          input[type="checkbox"] {
+              position: relative;
+              width: 110px;
+              height: 60px;
+              background: #F7F7F7;
+              outline: none;
+              appearance: none;
+              -webkit-appearance: none;
+              border-radius: 40px;
+              transition: 0.6s;
+          }
+
+          input:checked[type="checkbox"] {
+            background: #A83D84;
+          }
+
+          input[type="checkbox"]:before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            top: 5px;
+            left: 0;
+            background: #ffffff;
+            transform: scale(1.4);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+            transition: .5s;
+          }
+
+          input:checked[type="checkbox"]:before {
+            left: 55px;
+          }
+        </style>
+  </body>
+</html>
